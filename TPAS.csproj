@@ -154,7 +154,6 @@
     <Content Include="Emailauthentication.aspx" />
     <Content Include="Emailauthenticationregistration.aspx" />
     <Content Include="Expired.aspx" />
-    <Content Include="FacialRegistration.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="index.aspx" />
     <Content Include="jquery-1.10.2.js" />
@@ -249,13 +248,6 @@
     <Compile Include="Expired.aspx.cs">
       <DependentUpon>Expired.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FacialRegistration.aspx.cs">
-      <DependentUpon>FacialRegistration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FacialRegistration.aspx.designer.cs">
-      <DependentUpon>FacialRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Homepage.aspx.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>

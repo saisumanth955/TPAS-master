@@ -13,7 +13,7 @@
             <asp:TextBox ID="TextBox3" runat="server" Width="229px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Username Requried" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
-            Enter the Unique code:<asp:TextBox ID="TextBox2" runat="server" Width="223px"  type="password"></asp:TextBox>    
+            Enter the Unique code:<asp:TextBox ID="TextBox2" runat="server" Width="223px"  type="password" Onpaste="return false"></asp:TextBox>    
 &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Code required to verify identity" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
             <h6>*Sent at the time of registration to the specified mail ID</h6>

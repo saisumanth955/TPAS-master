@@ -14,13 +14,12 @@ namespace TPAS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetNoStore();
         }
 
-        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         protected void Button1_Click(object sender, EventArgs e)
         {

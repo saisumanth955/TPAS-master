@@ -40,6 +40,8 @@ namespace TPAS
         {
             int i = 0;
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetNoStore();
             if (!this.IsPostBack)
             {
                 Session["Reset"] = true;
@@ -48,9 +50,7 @@ namespace TPAS
                 int timeout = (int)section.Timeout.TotalMinutes * 50 * 25;
                 ClientScript.RegisterStartupScript(this.GetType(), "SessionAlert", "SessionExpireAlert(" + timeout + ");", true);
             }
-            Response.Cache.SetCacheability(HttpCacheability.NoCache);
-            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
-            Response.Cache.SetNoStore();
+            
         }
         protected void sgnin_Click(object sender, EventArgs e)
         {
