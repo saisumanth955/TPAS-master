@@ -23,16 +23,14 @@
             <asp:TextBox ID="TextBox1" runat="server" Width="264px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Mandatory Field" ForeColor="#FF3300"></asp:RequiredFieldValidator>
         </div>
+            <asp:CheckBox ID="CheckBox1" runat="server" Text="Color Combination" />
         <br />
-            <asp:CheckBoxList ID="CheckBoxList1" runat="server">
-                <asp:ListItem>Color Combination</asp:ListItem>
-                <asp:ListItem>Facial Recognition</asp:ListItem>
-                <asp:ListItem>Fingerprint Recognition</asp:ListItem>
-                <asp:ListItem Value="Iris_Recognition">Iris Recognition</asp:ListItem>
-            </asp:CheckBoxList>
+            <asp:CheckBox ID="CheckBox2" runat="server" Text="Phone Number auth" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
+            <asp:CheckBox ID="CheckBox3" runat="server" Text="Fingerprint Recognition" />
         <br />
+            <asp:CheckBox ID="CheckBox4" runat="server" Text="Iris Recognition" />
         <br />
             <br />
             <br />

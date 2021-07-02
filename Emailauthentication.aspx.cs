@@ -12,13 +12,6 @@ namespace TPAS
 {
     public partial class Emailauthentication : System.Web.UI.Page
     {
-        int GenerateRandomNo()
-        {
-            int min = 0000;
-            int max = 9999;
-            Random rdm = new Random();
-            return rdm.Next(min, max);
-        }
         protected void Page_Load(object sender, EventArgs e)
         {
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
@@ -26,7 +19,7 @@ namespace TPAS
             Response.Cache.SetNoStore();
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
             if (TextBox1.Text != "")
             {
@@ -39,38 +32,14 @@ namespace TPAS
                 SqlDataReader sda = cmd.ExecuteReader();
                 if (sda.Read() == true)
                 {
-                    MailMessage mail = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                    mail.From = new MailAddress("vsumanthsai549@gmail.com");
-                    mail.To.Add(TextBox2.Text);
-                    mail.Subject = "Your OTP ";
-                    
-                    mail.Body = "Mr '" + TextBox1.Text + "' Your OTP is: '" + GenerateRandomNo() + "'";
-                    SmtpServer.Port = 587;
-                    SmtpServer.Credentials = new System.Net.NetworkCredential("vsumanthsai549@gmail.com", "Sumanth@gmail");
-                    SmtpServer.EnableSsl = true;
-                    SmtpServer.Send(mail);
-                    Response.Write("Successfully sent OTP");  
+                    Response.Redirect("Homepage.aspx");
                 }
                 else
                 {
-                    Response.Write("You are not an authorized user");
-
+                    Response.Redirect("Unauthorizedpage.aspx");
                 }
                 con.Close();
             }
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            if (GenerateRandomNo() == Convert.ToInt32(TextBox3.Text))
-            {
-                Response.Redirect("");
-            }
-            else
-            {
-                Response.Write("You haven't verified successfully");
-            }
-        }
+        }  
     }
 }

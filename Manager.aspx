@@ -16,6 +16,11 @@
             <Columns>
                 <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
                 <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+                <asp:BoundField DataField="frstauthoption" HeaderText="frstauthoption" SortExpression="frstauthoption" />
+                <asp:BoundField DataField="scndauthoption" HeaderText="scndauthoption" SortExpression="scndauthoption" />
+                <asp:BoundField DataField="colorsequence" HeaderText="colorsequence" SortExpression="colorsequence" />
+                <asp:BoundField DataField="phn_number" HeaderText="phn_number" SortExpression="phn_number" />
+                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
             </Columns>
             <FooterStyle BackColor="#CCCC99" />
             <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />

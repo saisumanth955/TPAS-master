@@ -80,11 +80,10 @@ namespace TPAS
             conn.Open();
             if (clrusrname.Text != "" && TextBox1.Text != "")
             {
-                string insertQuery = "UPDATE Login1 SET colorsequence = @colorsequence, phn_number=@phone WHERE Username = '" + clrusrname.Text + "'";
+                string insertQuery = "UPDATE Login1 SET colorsequence = @colorsequence WHERE Username = '" + clrusrname.Text + "'";
                 SqlCommand com = new SqlCommand(insertQuery, conn);
                 string sha256 = ComputeSha256Hash(TextBox2.Text);
                 com.Parameters.AddWithValue("@colorsequence", sha256);
-                com.Parameters.AddWithValue("@phone", TextBox3.Text);
                 com.ExecuteNonQuery();
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
@@ -93,7 +92,7 @@ namespace TPAS
                 mail.Subject = "Your Color Combination";
                 mail.Body = "Mr '" + clrusrname.Text + "' Your Color Combination is: '" + TextBox2.Text + "'";
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("vsumanthsai549@gmail.com", "Sumanth@gmail");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("vsumanthsai549@gmail.com", "Srivatsa@gmail");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 Response.Write("Successfully Registered your Color Combination");

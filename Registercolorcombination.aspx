@@ -50,11 +50,6 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="rgtrpwdbox" runat="server" style="margin-left: 0px" Width="274px" type="password"></asp:TextBox>
 &nbsp;&nbsp;<h6>*your password is being saved</h6>
-        <p class="auto-style8">Phone Number:
-            <asp:TextBox ID="TextBox3" runat="server" Width="231px"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="RequiredField" ForeColor="Red"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3" ErrorMessage="Please enter a 10 digit mobile number" ForeColor="Red" ValidationExpression="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"></asp:RegularExpressionValidator>
-        </p>
         </p>
         <p class="auto-style7">
             <asp:Button ID="colorcombrst" runat="server" OnClick="colorcombrst_Click" Text="Reset color comb" Width="181px" />

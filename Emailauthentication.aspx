@@ -14,7 +14,7 @@
         window.onpageshow = function (evt) { if (evt.persisted) DisableBackButton() }
         window.onunload = function () { void (0) }
     </script>
-</head>
+    </head>
 <body>
     
     <form id="form1" runat="server">
@@ -27,15 +27,9 @@
             Email address:
             <asp:TextBox ID="TextBox2" runat="server" Width="226px"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="send OTP" Width="175px" />
-&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="RequiredField" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="Enter Valid email" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-            <br />
-            <br />
-            Enter OTP:
-            <asp:TextBox ID="TextBox3" runat="server" Width="255px"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Required field to verify you" ForeColor="Red" ControlToValidate="TextBox3"></asp:RequiredFieldValidator>
             <br />
 &nbsp;&nbsp;&nbsp;
             <br />

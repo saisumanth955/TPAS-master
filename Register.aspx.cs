@@ -89,7 +89,7 @@ namespace TPAS
             : "<span style='color:red'>Captcha verification failed</span>";
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
             con.Open();
-            if (TextBox1.Text != "" && TextBox2.Text != "" && TextBox3.Text != "" && TextBox2.ForeColor==Color.Green && TextBox4.Text !="")
+            if (TextBox1.Text != "" && TextBox2.Text != "" && TextBox3.Text != "" && TextBox2.ForeColor==Color.Green)
             {
 
                 try
@@ -109,11 +109,10 @@ namespace TPAS
                     {
                         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
                         conn.Open();
-                        string insertQuery = "insert into Login1 (Username, Password,email) values(@username, @password, @email)";
+                        string insertQuery = "insert into Login1 (Username, Password) values(@username, @password)";
                         SqlCommand com = new SqlCommand(insertQuery, conn);
                         com.Parameters.AddWithValue("@username", TextBox1.Text);
                         com.Parameters.AddWithValue("@password", TextBox2.Text);
-                        com.Parameters.AddWithValue("@email", TextBox4.Text);
                         com.ExecuteNonQuery();
                         Response.Redirect("Registrationauthentication.aspx");
                         conn.Close();

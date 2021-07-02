@@ -44,7 +44,7 @@ namespace TPAS
                 SqlCommand com = new SqlCommand(query, con);
                 com.Parameters.AddWithValue("@frstauthoption", CheckBox2.Text);
                 com.ExecuteNonQuery();
-                Response.Redirect("Facial.aspx");
+                Response.Redirect("Phonenumberregister.aspx");
             }
             else if (CheckBox3.Checked == true)
             {

@@ -151,27 +151,23 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Bin\AjaxControlToolkit.dll" />
-    <Content Include="Content\jQuery-webcam-master\jquery.webcam.js" />
-    <Content Include="Content\jQuery-webcam-master\jquery.webcam.min.js" />
-    <Content Include="Content\jQuery-webcam-master\jscam.swf" />
-    <Content Include="Content\jQuery-webcam-master\jscam_canvas_only.swf" />
-    <Content Include="Content\jQuery-webcam-master\src\jscam.xml" />
     <Content Include="Emailauthentication.aspx" />
+    <Content Include="Emailauthenticationregistration.aspx" />
     <Content Include="Expired.aspx" />
     <Content Include="FacialRegistration.aspx" />
+    <Content Include="Homepage.aspx" />
     <Content Include="index.aspx" />
     <Content Include="jquery-1.10.2.js" />
     <Content Include="Loginauthenticationcheck.aspx" />
     <Content Include="LoginColorCombinationcheck.aspx" />
     <Content Include="password.png" />
     <Content Include="Phoneauthenticationlogin.aspx" />
+    <Content Include="Phonenumberregister.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Registrationauthentication.aspx" />
     <Content Include="Registercolorcombination.aspx" />
     <Content Include="ResetcolorCombination.aspx" />
     <Content Include="Contact.aspx" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -187,19 +183,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\jQuery-webcam-master\bower.json" />
-    <Content Include="Content\jQuery-webcam-master\Makefile" />
-    <Content Include="Content\jQuery-webcam-master\README.md" />
-    <Content Include="Content\jQuery-webcam-master\src\BitString.as" />
-    <Content Include="Content\jQuery-webcam-master\src\JPGEncoder.as" />
-    <Content Include="Content\jQuery-webcam-master\src\jscam.as" />
-    <Content Include="Content\jQuery-webcam-master\webcam.jquery.json" />
     <Content Include="Scripts\axcorlib.js" />
     <Content Include="Scripts\axcorlib.min.js" />
     <Content Include="Scripts\mscorlib.js" />
     <Content Include="Scripts\mscorlib.min.js" />
-    <Content Include="WebCam.js" />
-    <Content Include="Bin\AjaxControlToolkit.dll.refresh" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -228,6 +215,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Unauthorizedpage.aspx" />
     <Content Include="UpdateColorCombination.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -251,6 +239,13 @@
     <Compile Include="Emailauthentication.aspx.designer.cs">
       <DependentUpon>Emailauthentication.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Emailauthenticationregistration.aspx.cs">
+      <DependentUpon>Emailauthenticationregistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Emailauthenticationregistration.aspx.designer.cs">
+      <DependentUpon>Emailauthenticationregistration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Expired.aspx.cs">
       <DependentUpon>Expired.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -261,6 +256,13 @@
     </Compile>
     <Compile Include="FacialRegistration.aspx.designer.cs">
       <DependentUpon>FacialRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -289,6 +291,13 @@
     </Compile>
     <Compile Include="Phoneauthenticationlogin.aspx.designer.cs">
       <DependentUpon>Phoneauthenticationlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phonenumberregister.aspx.cs">
+      <DependentUpon>Phonenumberregister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phonenumberregister.aspx.designer.cs">
+      <DependentUpon>Phonenumberregister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -368,6 +377,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Unauthorizedpage.aspx.cs">
+      <DependentUpon>Unauthorizedpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unauthorizedpage.aspx.designer.cs">
+      <DependentUpon>Unauthorizedpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateColorCombination.aspx.cs">
       <DependentUpon>UpdateColorCombination.aspx</DependentUpon>

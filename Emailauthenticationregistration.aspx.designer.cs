@@ -11,7 +11,7 @@ namespace TPAS
 {
 
 
-    public partial class Emailauthentication
+    public partial class Emailauthenticationregistration
     {
 
         /// <summary>

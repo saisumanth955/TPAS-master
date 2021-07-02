@@ -21,60 +21,91 @@ namespace TPAS
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
-            con.Open();
-
-            if (CheckBoxList1.Text == "")
+            if (CheckBox1.Checked == true)
             {
-                Response.Write("Please Check the authentication option");
+
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
+                con.Open();
+                string query = "update Login1 set frstauthoption=@frstauthoption where Username='" + TextBox1.Text + "'";
+                SqlCommand com = new SqlCommand(query, con);
+                com.Parameters.AddWithValue("@frstauthoption", CheckBox1.Text);
+                com.ExecuteNonQuery();
+                Response.Redirect("LoginColorcombinationcheck.aspx");
+            }
+            else if (CheckBox2.Checked == true)
+            {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
+                con.Open();
+                string query = "update Login1 set frstauthoption=@frstauthoption where Username='" + TextBox1.Text + "'";
+                SqlCommand com = new SqlCommand(query, con);
+                com.Parameters.AddWithValue("@frstauthoption", CheckBox2.Text);
+                com.ExecuteNonQuery();
+                Response.Redirect("Phoneauthenticationlogin.aspx");
+            }
+            else if (CheckBox3.Checked == true)
+            {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
+                con.Open();
+                string query = "update Login1 set frstauthoption=@frstauthoption where Username='" + TextBox1.Text + "'";
+                SqlCommand com = new SqlCommand(query, con);
+                com.Parameters.AddWithValue("@frstauthoption", CheckBox3.Text);
+                com.ExecuteNonQuery();
+                // Response.Redirect("Facial.aspx");
             }
             else
             {
-                string query = "SELECT * FROM Login1 where frstauthoption=@frstauthoption and Username=@username";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@username", TextBox1.Text);
-                cmd.Parameters.AddWithValue("@frstauthoption", CheckBoxList1.Text);
-                SqlDataReader rd = cmd.ExecuteReader();
-                if (rd.HasRows)
-                {
-                    Response.Redirect("LoginColorCombinationCheck.aspx");
-                    Response.Write("u verified your first auth option");
-                    rd.Close();
-                }
-                else
-                {
-                    Response.Redirect("" + CheckBoxList1.Text + ".aspx");
-                }
-                con.Close();
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
+                con.Open();
+                string query = "update Login1 set frstauthoption=@frstauthoption where Username='" + TextBox1.Text + "'";
+                SqlCommand com = new SqlCommand(query, con);
+                com.Parameters.AddWithValue("@frstauthoption", CheckBox4.Text);
+                com.ExecuteNonQuery();
+                //Response.Redirect("Facial.aspx");
             }
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
-            con.Open();
-
-            if (CheckBoxList1.Text == "")
+            if (CheckBox1.Checked == true)
             {
-                Response.Write("Please check second authentication option");
+
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
+                con.Open();
+                string query = "update Login1 set scndauthoption=@scndauthoption where Username='" + TextBox1.Text + "'";
+                SqlCommand com = new SqlCommand(query, con);
+                com.Parameters.AddWithValue("@scndauthoption", CheckBox1.Text);
+                com.ExecuteNonQuery();
+                Response.Redirect("LoginColorcombinationcheck.aspx");
+            }
+            else if (CheckBox2.Checked == true)
+            {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
+                con.Open();
+                string query = "update Login1 set scndauthoption=@scndauthoption where Username='" + TextBox1.Text + "'";
+                SqlCommand com = new SqlCommand(query, con);
+                com.Parameters.AddWithValue("@scndauthoption", CheckBox2.Text);
+                com.ExecuteNonQuery();
+                Response.Redirect("Phoneauthenticationlogin.aspx");
+            }
+            else if (CheckBox3.Checked == true)
+            {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
+                con.Open();
+                string query = "update Login1 set scndauthoption=@scndauthoption where Username='" + TextBox1.Text + "'";
+                SqlCommand com = new SqlCommand(query, con);
+                com.Parameters.AddWithValue("@scndauthoption", CheckBox3.Text);
+                com.ExecuteNonQuery();
+                Response.Redirect("Facial.aspx");
             }
             else
             {
-                string query = "SELECT * FROM Login1 where scndauthoption=@scndauthoption and Username=@username ";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@username", TextBox1.Text);
-                cmd.Parameters.AddWithValue("@scndauthoption", CheckBoxList1.Text);
-                SqlDataReader rd = cmd.ExecuteReader();
-                if (rd.HasRows)
-                {
-                    Response.Write("u verified your second auth option");
-                    rd.Close();
-                }
-                else
-                {
-                    Response.Redirect("" + CheckBoxList1.Text + ".aspx");
-                }
-                con.Close();
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SumanthConnectionString"].ConnectionString);
+                con.Open();
+                string query = "update Login1 set scndauthoption=@scndauthoption where Username='" + TextBox1.Text + "'";
+                SqlCommand com = new SqlCommand(query, con);
+                com.Parameters.AddWithValue("@scndauthoption", CheckBox4.Text);
+                com.ExecuteNonQuery();
+                //Response.Redirect("Facial.aspx");
             }
         }
     }
