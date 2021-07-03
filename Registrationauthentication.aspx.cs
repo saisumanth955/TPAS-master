@@ -88,7 +88,7 @@ namespace TPAS
                 SqlCommand com = new SqlCommand(query, con);
                 com.Parameters.AddWithValue("@scndauthoption", CheckBox2.Text);
                 com.ExecuteNonQuery();
-                Response.Redirect("Phoneauthenticationlogin.aspx");
+                Response.Redirect("Phonenumberregister.aspx");
             }
             else if (CheckBox3.Checked == true)
             {

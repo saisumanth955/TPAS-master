@@ -28,5 +28,10 @@ namespace TPAS
             Response.Write("You have successfully registered");
             conn.Close();
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

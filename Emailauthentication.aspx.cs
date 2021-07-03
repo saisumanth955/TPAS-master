@@ -40,6 +40,11 @@ namespace TPAS
                 }
                 con.Close();
             }
-        }  
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

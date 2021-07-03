@@ -1,0 +1,17 @@
+﻿   .newStyle3 {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 1;
+    transition: 0.3s;
+              }
+
+   newStyle3:hover {
+    opacity: 0.6
+                   }
+
+
